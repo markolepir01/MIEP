@@ -8,6 +8,8 @@ from config import TRAIN_PATH, MODEL_DIR, TARGET, RANDOM_STATE, N_FOLDS
 from preprocess import get_preprocessor
 from models import get_model
 from utils import rmse_log, log_transform
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 def main(model_name):
     df = pd.read_csv(TRAIN_PATH)
@@ -39,6 +41,6 @@ def main(model_name):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="ridge",
-                        help="Model name: ridge, lasso, elastic, rf, xgb, lgbm, catboost, tfdf")
+                        help="Model name: ridge, lasso, elastic, rf, xgb, lgbm, catboost")
     args = parser.parse_args()
     main(args.model)

@@ -3,8 +3,6 @@ from sklearn.ensemble import RandomForestRegressor
 import xgboost as xgb
 import lightgbm as lgb
 import catboost as cb
-import tensorflow as tf
-import tensorflow_decision_forests as tfdf
 
 def get_model(name="ridge"):
     name = name.lower()
@@ -51,7 +49,5 @@ def get_model(name="ridge"):
             random_seed=42,
             verbose=False
         )
-    elif name == "tfdf":
-        return tfdf.keras.RandomForestModel(task=tfdf.keras.Task.REGRESSION)
     else:
         raise ValueError(f"Unknown model name: {name}")

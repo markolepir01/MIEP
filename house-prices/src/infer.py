@@ -1,8 +1,8 @@
 import pandas as pd
-import numpy as np
 import joblib
 import argparse
 import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 from config import TEST_PATH, SUBMISSION_DIR, ID_COL
 from utils import inverse_log
 
