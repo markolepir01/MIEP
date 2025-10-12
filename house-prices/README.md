@@ -82,7 +82,7 @@ Tabela ispod prikazuje prosečne vrednosti **RMSE (log)** dobijene kroz 5-Fold C
 ---
 
 
-## 📄 Zaključak
+## Zaključak
 
 - Linearni modeli (Ridge, Lasso, ElasticNet) dali su osnovnu tačnost i poslužili kao baseline.
 - Ansambl i boosting modeli (Random Forest, XGBoost, LightGBM, CatBoost) značajno su poboljšali rezultate.
