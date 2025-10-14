@@ -11,7 +11,7 @@ def rmse_log(y_true, y_pred):
     return sqrt(mean_squared_error(y_true, y_pred))
 
 BASE_MODELS = ["ridge", "lasso", "elastic", "rf", "xgb", "lgbm", "catboost"]
-META_MODEL = "xgb"
+META_MODEL = "ridge"
 N_FOLDS = 5
 RANDOM_STATE = 42
 
