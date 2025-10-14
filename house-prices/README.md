@@ -61,6 +61,16 @@ Rezultat će biti sačuvan u:
 submissions/submission_catboost.csv
 ```
 
+### Stacking Ensemble (meta-model)
+
+Nakon što su trenirani svi osnovni modeli, može se pokrenuti stacking eksperiment koji kombinuje njihove predikcije i trenira meta-model
+
+```bash
+python src/stacking_train.py
+```
+
+Ova skripta koristi out-of-fold predikcije sedam osnovnih modela (ridge, lasso, elastic, rf, xgb, lgbm, catboost), trenira meta-model, izračunava prosečni RMSE(log) rezultata stacking kombinacija i generiše novi submission fajl
+
 ---
 
 ## Eksperimenti i rezultati
