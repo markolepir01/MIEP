@@ -27,7 +27,7 @@ oof_predictions = np.zeros((len(X_train), len(BASE_MODELS)))
 test_predictions = np.zeros((len(X_test), len(BASE_MODELS)))
 
 for i, name in enumerate(BASE_MODELS):
-    print(f"\n🔹 Treniranje osnovnog modela: {name.upper()}")
+    print(f"\nTraining the base model: {name.upper()}")
     model = get_model(name)
 
     oof_fold_preds = np.zeros(len(X_train))
