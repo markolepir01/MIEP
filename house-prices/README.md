@@ -21,6 +21,7 @@ house-prices/
 		utils.py         # RMSE log, transformacije
 		train.py         # treniranje modela (eksperimenti)
 		infer.py         # inference pipeline za generisanje predikcija
+		stacking_train.py # stacking ensemble - kombinuje sve modele i trenira meta-model
 	requirements.txt         # biblioteke potrebne za pokretanje
 ```
 
